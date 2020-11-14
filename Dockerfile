@@ -18,5 +18,5 @@ RUN apt-get update && \
 #COPY entrypoint.sh /
 #RUN chmod a+x /entrypoint.sh
 #STOPSIGNAL SIGINT
-#CMD /entrypoint.sh
+CMD /backup-script.sh
 #EXPOSE 8007/tcp

@@ -1,5 +1,5 @@
-# proxmoxbackupserver
-Proxmox Backup Server - Docker Image
+# proxmoxbackupclient
+Unnofficial Docker Image for Proxmox Backup Server Client
 
 ```
 # docker-compose.yml

@@ -20,4 +20,10 @@ services:
       - /:/host-rootfs:ro
  ```     
       
- Backup can be started by running "docker-compose up"
+Create your docker-compose.yml file and run docker-compose up to deploy the container once.
+
+After the container is deployed you an run the backup periodicly by a cronjob:
+```
+# m h  dom mon dow   command
+42 20 * * * docker-compose -f /opt/containers/proxmox-backup-client/docker-compose.yml run proxmox-backup-client
+```

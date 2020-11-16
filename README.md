@@ -18,7 +18,6 @@ services:
     command: 'proxmox-backup-client backup root.pxar:/host-rootfs/'
     volumes:
       - /:/host-rootfs:ro
-      - ./backup-script.sh:/backup-script.sh
  ```     
       
  Backup can be started by running "docker-compose up"

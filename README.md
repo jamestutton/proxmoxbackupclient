@@ -11,6 +11,11 @@ services:
       dockerfile: Dockerfile
     container_name: proxmox-backup-client
     hostname: hostname-backup
+    environment:
+      - PBS_PASSWORD=your_password
+      - PBS_REPOSITORY=yourUsername@pbs@yourHostname:yourDatastore
+      - PBS_FINGERPRINT=yourFingerprint
+    command: 'proxmox-backup-client backup root.pxar:/host-rootfs/'
     volumes:
       - /:/host-rootfs:ro
       - ./backup-script.sh:/backup-script.sh

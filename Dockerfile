@@ -18,5 +18,5 @@ RUN apt-get update && \
 #COPY entrypoint.sh /
 #RUN chmod a+x /entrypoint.sh
 #STOPSIGNAL SIGINT
-CMD /backup-script.sh
+CMD proxmox-backup-client backup root.pxar:/host-rootfs/
 #EXPOSE 8007/tcp

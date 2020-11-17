@@ -25,5 +25,5 @@ Create your docker-compose.yml file and run docker-compose up to deploy the cont
 After the container is deployed you an run the backup periodicly by a cronjob:
 ```
 # m h  dom mon dow   command
-42 20 * * * docker-compose -f /opt/containers/proxmox-backup-client/docker-compose.yml run proxmox-backup-client
+42 20 * * * docker-compose --rm -f /opt/containers/proxmox-backup-client/docker-compose.yml run proxmox-backup-client
 ```
